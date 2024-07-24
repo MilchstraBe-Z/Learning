@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML2-semantics</title>
+</head>
+
+<body>
+    <h1>block VS inline elements</h1>
+    <p>block</p>inline
+    <p>实际上"inline"在网页中独占一个block(paragraph)</p>
+
+    <h2>"div" & "span"</h2>
+    <p>"div" make a block, it can better the CSS formatting. like following pic, the img and words are combined
+        together.
+    </p>
+    <img src="pictures/img-block.png" alt="img sample ">
+
+    <p>"span" make an inline block for better different style in one line words</p>
+    <img src="pictures/img-span.png" alt="span sample">
+
+    <h1>Odd Assortment of Elements</h1>
+
+    <h2>"hr" sep line</h2>
+    <hr>
+    <h2>"br" para break</h2>
+    <p>
+        this is <br>
+        break down by <br>
+        "br"
+    </p>
+
+    <h2>"sup" 上角标</h2>
+    <p>This is my citation <sup><a href="https://en.wikipedia.org/wiki/Chicken#cite_note-nature-45">[1]</a></sup>
+    </p>
+
+    <h2>"sub" 下角标</h2>
+    <p>This is some chemistry words: H<sub>2</sub>O</p>
+    <p>Combine sup and sub make a division: <sup>1</sup>/<sub>2</sub></p>
+
+    <h2>Entity codes (how to type reserved character)</h2>
+    <p>"&lt" &hearts; &amp;</p>
+
+    <p>more refer to <a href="https://entitycode.com/">Entity Code</a></p>
+
+    <h2>Semantic ELements (注意element的语义,不要全用div)</h2>
+    <main>
+        main content for "main"
+    </main>
+
+    <nav>
+        "nav" for a list of links (页面上方的导航页)
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="temp.html">temp</a></li>
+            <li><a href="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        "section" to seperate contents to different parts (用来把一部分内容组合成一个group)
+    </section>
+
+
+</body>
+
+</html>
