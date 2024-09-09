@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML3-Forms & Tables</title>
+</head>
+
+<body>
+    <h1>simple table about td/th/tr</h1>
+    td: cell <br>
+    tr: row <br>
+    th: header <br>
+    <table>
+        <tr>
+            <th>Animal</th>
+            <th>mass</th>
+            <th>max</th>
+            <th>define</th>
+        </tr>
+        <tr>
+            <td>Ostrich</td>
+            <td>104(230)</td>
+            <td>156.8</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Jkla</td>
+            <td>230(120)</td>
+            <td>908.8</td>
+            <td>No</td>
+        </tr>
+    </table>
+
+    <h1>table about thead/tbody/tfoot</h1>
+    对应head，bodym，foot
+    <table>
+        <thead>
+            <tr>
+                <th>Animal</th>
+                <th>mass</th>
+                <th>max</th>
+                <th>define</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ostrich</td>
+                <td>104(230)</td>
+                <td>156.8</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Jkla</td>
+                <td>230(120)</td>
+                <td>908.8</td>
+                <td>No</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>create 2 row titles</h2>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Animal</th>
+                <th rowspan="2">MASS</th>
+                <th rowspan="2">define</th>
+            </tr>
+            <tr>
+                <th>mass</th>
+                <th>max</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ostrich</td>
+                <td>104(230)</td>
+                <td>156.8</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Jkla</td>
+                <td>230(120)</td>
+                <td>908.8</td>
+                <td>No</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>form</h1>
+    <b>form</b> element is for some input info, like search/username/etc <br>
+    <i>action</i> atrribute specifiese where the form data will be sent (like subwebsites, etc)<br>
+    <i>method</i> atrribute specifiese what function to use
+
+    <h2>input&label</h2>
+    <form action="/sub">
+        <b>input</b> is for an input box, different <b>type</b> for different uses and <b>placeholder</b> is for
+        preinput <br>
+        <b>label</b> conbined with input will give a description before inputbox, label needs the input's <b>id</b> to
+        group with <br>
+        <b>name</b> atrribute will help recognize the content of inputbox and send to the server by <i>submit</i>
+        <label for="username">Username</label>
+        <input type="text" placeholder="username" id="username" name="username"> <br>
+        <label for="password">Password</label>
+        <input type="password" placeholder="password" id="password" name="pwd"> <br>
+        <label for="color">color</label>
+        <input type="color" id="color"> <br>
+        <label for="number">number</label> (可以设置最值和步长)
+        <input type="number" id="number" min="1" max="10" step="2"> <br>
+        <br>
+    </form>
+
+    <h2>button</h2>
+    <form action="/sub">
+        <b>button</b> inside the form do the form <i>action</i> by defult, use <b>type</b> to change the behavior <br>
+        <button>submit</button> <br>
+        <button type="button">Regular button (wont submit)</button>
+        <b>Note:</b> defult submit button has the same function with <b><input type="submit" value="click!!"> (input
+            type="submit"
+            value="click!!")</b>
+    </form>
+
+    <h2>practice</h2>
+    <p>Reddit Search Box
+    <form action="https://www.reddit.com/search/">
+        <label for="search">Input search content:</label>
+        <input type="text" name="q" id="search">
+        <button>Search in Reddit</button>
+    </form>
+    </p>
+    <p>YouTube Search
+    <form action="https://www.youtube.com/results">
+        <label for="search">Input</label>
+        <input type="text" name="search_query" id="search">
+        <button>Search in YouTube</button>
+    </form>
+    </p>
+
+    <h2>More Inputs</h2>
+    <h3>type "checkbox"</h3>
+    It's for single checkbox <br>
+    <form action="/sub">
+        <input type="checkbox" name="agree" id="agree">
+        <label for="agree">I agree above content</label>
+        <button>submit</button>
+    </form>
+
+    <h3>type "radio"</h3>
+    it's for multiple checkboxes. you can change the "name" atrribute to combine them whether they can mulitchoose or
+    single one only (<b>which means: same name can only choose once</b>). And use "value" to transefer certain value
+    when submit the option <b>it MUST have a value!!!!!</b><br>
+    <form action="/sub">
+        <label for="xs">XS</label>
+        <input type="radio" name="size" id="xs" value="xs">
+        <label for="s">S</label>
+        <input type="radio" name="size" id="s" value="s">
+        <label for="m">M</label>
+        <input type="radio" name="size" id="m" value="m">
+        <button>submit</button>
+    </form>
+
+    <h3>range</h2>
+        进度条，可以用value指定初始值 <br>
+        <form action="/sub">
+            <label for="volume">Volume</label>
+            <input type="range" name="volume" id="volume" min="1" max="100" value="75">
+        </form>
+
+        <h2>select & option</h2>
+        <form action="/sub">
+            <label for="meal">Please select an entry</label>
+            <select name="meal" id="meal">
+                <option value="fish">Fish</option>
+                <option value="Veg">Vegetarian</option>
+                <option value="steak">Steak</option>
+            </select>
+        </form>
+
+        <h2>textarea</h2>
+        <form action="/sub">
+            use <b>cows/cols</b> for size of the box <br>
+            <label for="text">Give your story:</label>
+            <textarea name="story" id="text" rows="10" cols="40" placeholder="Type it now!"></textarea>
+        </form>
+
+        <h2>HTML5 Form Info Validation</h2>
+        <b>required</b> to avoid empty input <br>
+        <b>minlength/maxlength</b> to manage the length
+        <b>pattern</b> to restrict the input symbol range (邮箱完整/必须含有特殊字符/...)
+        <form action="/sub">
+            <input type="password" name="password" id="password" minlength="5" maxlength="20" required>
+            <input type="email" name="email" required>
+        </form>
+
+        <h1>Marathon Registration Form</h1>
+        <form action="https://www.reddit.com/search/">
+            <div>
+                <label for="fir-name">First Nmae</label>
+                <input type="text" name="fir-name" id="fir-name" required>
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" required>
+            </div>
+            <div>
+                <label for="race">Select a Race</label> <br>
+                <input type="radio" name="race" id="5">
+                <label for="5">Fun Run 5km</label> <br>
+                <input type="radio" name="race" id="10">
+                <label for="10">Half Marathon</label> <br>
+                <input type="radio" name="race" id="20">
+                <label for="20">Full Marathon</label>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <label for="password">password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div>
+                <label for="group">Select Age Group</label>
+                <select name="group" id="group">
+                    <option value="st 18">Under 18</option>
+                    <option value="18-30">18-30</option>
+                    <option value="30-50">30-50</option>
+                    <option value="bt 50">50+</option>
+                </select>
+            </div>
+            <button>Register</button>
+        </form>
+
+</body>
+
+</html>
