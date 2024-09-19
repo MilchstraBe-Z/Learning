@@ -1,3 +1,20 @@
+/* use "<link rel="stylesheet" href="myStyles.css">" to insert css file\
+in HTML file */
+
 h1 {
     color: indigo;
 }
+
+/* background-color to only change the background \
+(background attribute is much more poweful not use it here */
+/* color second representation: hex code */
+p {
+    background-color: #999;
+}
+
+/* color third representation: RGB code */
+h2 {
+    color: rgb(100, 20, 200);
+}
+
+/* Text Property */
