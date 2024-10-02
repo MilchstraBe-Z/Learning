@@ -1,0 +1,15 @@
+img {
+    width: 30%;
+    /* margin: 1.666667%; */
+    margin: calc(10%/6);
+}
+
+nav {
+    text-transform: uppercase;
+    border-bottom: 3px solid green;
+    width: 30%;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 2% 0;
+
+}
